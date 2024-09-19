@@ -37,6 +37,13 @@ return [
             'throw' => false,
         ],
 
+        'teacher-id' => [
+            'driver' => 'local',
+            'root' => storage_path('app/private/teachers-attachments'),
+            'serve' => true,
+            'throw' => false,
+        ],
+
         'public' => [
             'driver' => 'local',
             'root' => storage_path('app/public'),
