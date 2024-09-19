@@ -104,7 +104,7 @@
                             <div class="form-check"> 
                                 <x-checkbox :invalid="$errors->has('agree') ? 'is-invalid' : ''" 
                                     id="agreeCheck" 
-                                    onchange="toggleButton('#registerBtn')" />
+                                    onchange="toggleButton('registerBtn')" />
                                 <label class="form-check-label" for="agreeCheck">
                                     I agree to the <a href="#">terms</a> 
                                 </label> 

@@ -8,17 +8,18 @@ function numericOnly(element) {
 window.numericOnly = numericOnly;
 
 function toggleButton(button) {
-    if(button) {
-        document.querySelector(`${button}`).toggleAttribute('disabled');
+    const btn = document.querySelector(`#${button}`);
+    if(btn){
+        btn.toggleAttribute('disabled');
     }
 }
 window.toggleButton = toggleButton;
 
 function teacherAction(action, teacher) {
     Swal.fire({
-        title: action,
+        title: action.toUpperCase(),
         icon: 'question',
-        text: `Are you sure you want to ${action} this teacher?`,
+        text: `Are you sure you want to ${action.toUpperCase()} this teacher?`,
         confirmButtonText: action,
         showCancelButton: true,
         allowOutsideClick: false,
