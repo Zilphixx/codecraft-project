@@ -79,8 +79,8 @@
                             render: function(data, type, row) {
                                 return `
                                     <div class="text-center">
-                                        <button type="button" class="btn btn-success" id="approveBtn" onclick="teacherAction('approve', ${row.id})">Approve</button>
-                                        <button type="button" class="btn btn-danger" id="rejectBtn" onclick="teacherAction('reject', ${row.id})">Reject</button> 
+                                        <button type="button" class="btn btn-success" id="approveBtn" onclick="teacherAction('Approve', ${row.id})">Approve</button>
+                                        <button type="button" class="btn btn-danger" id="rejectBtn" onclick="teacherAction('Reject', ${row.id})">Reject</button> 
                                     </div>
                                 `
                             }

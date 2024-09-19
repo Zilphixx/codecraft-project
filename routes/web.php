@@ -24,6 +24,8 @@ Route::middleware(['auth', 'verified'])->group(function() {
             Route::get('/get-teachers/{condition}', 'teachersList')
                 ->name('get.teachers');
             Route::get('/view-file/{file}', 'viewFile');
+            Route::post('/verify-teacher', 'verifyTeacher')
+                ->name('verify.teacher');
         });
     });
 });
