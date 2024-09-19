@@ -52,9 +52,10 @@
 
     @push('scripts')
         <script>
+            let teacherListsTable;
             document.addEventListener('DOMContentLoaded', function() {
 
-                let datatable = new DataTable('#datatable', {
+                teacherListsTable = new DataTable('#datatable', {
                     ajax: `{{ route('get.teachers', 0) }}`,
                     columns: [
                         {
@@ -88,6 +89,23 @@
                     ],
                 });
             });
+
+            function triggerSwal(config) {
+                Swal.fire(config).then((result) => {
+                    if(result.isConfirmed) {
+                        if(result.value.success) {
+                            Swal.fire({
+                                title: 'Success',
+                                icon: 'success',
+                                text:  result.value.message,
+                                timer: 5000,
+                            });
+
+                            teacherListsTable.ajax.reload();
+                        }
+                    }
+                })
+            }
         </script>
     @endpush
 </x-app-layout>

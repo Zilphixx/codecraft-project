@@ -82,9 +82,9 @@ class TeacherController extends Controller
 
             $teacher->notify(new NotifyTeacher($content));
 
-            // $teacher->update([
-            //     'is_verified' => true
-            // ]);
+            $teacher->update([
+                'is_verified' => true
+            ]);
 
             return response()->json([
                 'success' => true,
@@ -99,7 +99,7 @@ class TeacherController extends Controller
             ];
             $teacher->notify(new NotifyTeacher($content));
 
-            //$teacher->destroy();
+            $teacher->delete();
 
             return response()->json([
                 'success' => true,

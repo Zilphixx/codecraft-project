@@ -94,18 +94,7 @@ function teacherAction(action, teacher) {
         }
     }
 
-    Swal.fire(config).then((result) => {
-        if(result.isConfirmed) {
-            if(result.value.success) {
-                Swal.fire({
-                    title: 'Success',
-                    icon: 'success',
-                    text:  result.value.message,
-                    timer: 5000,
-                });
-            }
-        }
-    })
+    triggerSwal(config);
 }
 window.teacherAction = teacherAction;
 
